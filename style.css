@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    padding: 10px 0px;
+    justify-content: space-around;
+    color: white;
+    background-image: linear-gradient(to right, rgb(32, 2, 76), rgb(35, 70, 175));
+}
+
+nav ul {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    cursor: default;
+    transition: background-color 0.3s;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    cursor: default;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Dancing Script", cursive;
+}
+
+.hero {
+    display: flex;
+    min-height: 85vh;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    background-image: url("https://www.shutterstock.com/image-vector/color-gradient-background-abstract-orange-600nw-2480677725.jpg");
+    background-size: cover;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-left .one {
+    font-size: 60px;
+    color: rgb(52, 1, 52);
+    font-weight: bolder;
+}
+
+.hero-left .two {
+    font-size: 40px;
+}
+
+.bold {
+    font-weight: bold;
+    color: rgb(11, 60, 175);
+}
+
+.hero-right .img {
+    margin: 10px;
+    height: 250px;
+    width: 190px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding: 7px 14px;
+    border: 2px solid rgb(4, 47, 177);
+    background: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: background-color 0.5s;
+}
+
+.btn:hover {
+    background-color: blue;
+}
+
+.projects {
+    background-image: linear-gradient(to right, rgb(136, 241, 147), rgb(241, 154, 232));
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+.projects .text .one {
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+.projects .text .two {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.project {
+    display: flex;
+    gap: 50px;
+    border-top: 2px solid rgb(161 153 225 / 77%);
+}
+
+.project-img img {
+    width: 32vw;
+    border-radius: 4vw;
+    padding: 20px;
+}
+
+.project-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+}
+
+.project-info .text {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.project-info .p {
+    margin: 20px;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+footer {
+    background-color: rgb(28, 1, 44);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 910px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        gap: 2px;
+    }
+
+    .hero-left {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .hero {
+        min-height: 45vh;
+    }
+
+    .hero-left .one {
+        font-size: 35px;
+    }
+
+    .hero-left .two {
+        font-size: 25px;
+    }
+
+    .hero-right .img {
+        height: 200px;
+        width: 170px;
+    }
+
+    .projects .text .one {
+        font-size: 40px;
+    }
+
+    .projects .text .two {
+        font-size: 20px;
+        margin: 5px;
+    }
+
+    .project {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .project-img img {
+        width: 50vw;
+        padding: 10px;
+    }
+
+    .project-info {
+        padding: 0px;
+    }
+
+    .project-info .text {
+        font-size: 20px;
+    }
+}
