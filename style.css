@@ -7,8 +7,8 @@ nav {
     display: flex;
     padding: 10px 0px;
     justify-content: space-around;
-    color: white;
-    background-image: linear-gradient(to right, rgb(32, 2, 76), rgb(35, 70, 175));
+    color: black;
+    background-color: #A8D5E3;
 }
 
 nav ul {
@@ -19,28 +19,25 @@ nav ul {
 
 nav ul li {
     list-style-type: none;
-    font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    cursor: default;
-    transition: background-color 0.3s;
 }
 
 nav ul li a {
-    color: white;
+    color: black;
     text-decoration: none;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 18px;
     font-family: "Roboto", sans-serif;
     cursor: default;
     transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    color: yellow;
+    color: rgb(255, 0, 38);
 }
 
 .logo {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 35px;
+    font-weight: bolder;
     font-family: "Dancing Script", cursive;
 }
 
@@ -51,8 +48,7 @@ nav ul li a:hover {
     gap: 100px;
     align-items: center;
     font-family: "Roboto", sans-serif;
-    background-image: url("https://www.shutterstock.com/image-vector/color-gradient-background-abstract-orange-600nw-2480677725.jpg");
-    background-size: cover;
+    background-color: #FF78AC;
 }
 
 .hero-left {
@@ -63,21 +59,38 @@ nav ul li a:hover {
 
 .hero-left .one {
     font-size: 60px;
-    color: rgb(52, 1, 52);
+    color: black;
     font-weight: bolder;
 }
 
 .hero-left .two {
     font-size: 40px;
+    color: black;
 }
 
 .bold {
     font-weight: bold;
-    color: rgb(11, 60, 175);
+    color: rgb(53, 3, 3);
+}
+
+.btn {
+    margin: 10px 10px 10px 0px;
+    padding: 7px 14px;
+    border: 2px solid black;
+    background: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.5s;
+}
+
+.btn:hover {
+    background-color: #A8D5E3;
 }
 
 .hero-right .img {
-    margin: 10px;
     height: 250px;
     width: 190px;
     border-radius: 12px;
@@ -85,46 +98,27 @@ nav ul li a:hover {
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.btn {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    padding: 7px 14px;
-    border: 2px solid rgb(4, 47, 177);
-    background: white;
-    color: black;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-right: 10px;
-    font-size: 16px;
-    transition: background-color 0.5s;
-}
-
-.btn:hover {
-    background-color: blue;
-}
-
-.projects {
-    background-image: linear-gradient(to right, rgb(136, 241, 147), rgb(241, 154, 232));
+.projects-sec {
+    background-color: #F2F0EA;
     font-family: "Roboto", sans-serif;
     text-align: center;
 }
 
-.projects .text .one {
+.projects-sec .text .one {
+    padding-top: 10px;
     font-size: 60px;
     font-weight: bolder;
 }
 
-.projects .text .two {
+.projects-sec .text .two {
+    padding-bottom: 10px;
     font-size: 25px;
-    margin-top: 10px;
-    margin-bottom: 40px;
 }
 
 .project {
     display: flex;
     gap: 50px;
-    border-top: 2px solid rgb(161 153 225 / 77%);
+    border-top: 2px solid rgb(211 37 63 / 77%);
 }
 
 .project-img img {
@@ -135,10 +129,9 @@ nav ul li a:hover {
 
 .project-info {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     font-family: "Roboto", sans-serif;
-    padding: 20px;
 }
 
 .project-info .text {
@@ -155,8 +148,8 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: rgb(28, 1, 44);
-    padding: 20px;
+    background-color: rgb(11, 0, 17);
+    padding: 15px;
     color: white;
     text-align: center;
     font-family: "Roboto", sans-serif;
@@ -165,13 +158,26 @@ footer {
 @media screen and (max-width: 910px) {
     nav {
         flex-direction: column;
+        padding: 5px;
         align-items: center;
         gap: 10px;
+    }
+
+    nav ul li a {
+    font-size: 15px;
+    }
+
+    .logo {
+        font-size: 25px;
     }
 
     .hero {
         flex-direction: column-reverse;
         gap: 2px;
+    }
+
+    .hero-right .img{
+        margin: 10px;
     }
 
     .hero-left {
@@ -180,9 +186,6 @@ footer {
 }
 
 @media screen and (max-width: 630px) {
-    .hero {
-        min-height: 45vh;
-    }
 
     .hero-left .one {
         font-size: 35px;
@@ -197,13 +200,12 @@ footer {
         width: 170px;
     }
 
-    .projects .text .one {
+    .projects-sec .text .one {
         font-size: 40px;
     }
 
-    .projects .text .two {
+    .projects-sec .text .two {
         font-size: 20px;
-        margin: 5px;
     }
 
     .project {
@@ -214,10 +216,6 @@ footer {
     .project-img img {
         width: 50vw;
         padding: 10px;
-    }
-
-    .project-info {
-        padding: 0px;
     }
 
     .project-info .text {
